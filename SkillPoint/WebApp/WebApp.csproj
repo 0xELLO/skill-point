@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApp-1ADA9D33-8EF3-4AFB-81F7-97FB848CCFE3</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Tests.WebApp" />
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.9" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0-preview.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\App.BLL\App.BLL.csproj" />
+      <ProjectReference Include="..\App.DAL.EF\App.DAL.EF.csproj" />
+      <ProjectReference Include="..\App.Public.DTO\App.Public.DTO.csproj" />
+      <ProjectReference Include="..\Base.Extensions\Base.Extensions.csproj" />
+      <ProjectReference Include="..\Base.Resources\Base.Resources.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\Controllers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\MatchType\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\MatchType\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\MatchType\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\MatchType\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\MatchType\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Match\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Match\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Match\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Match\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Match\Index.cshtml" />
+    </ItemGroup>
+
+</Project>

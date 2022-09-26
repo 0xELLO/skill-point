@@ -1,0 +1,89 @@
+@model IEnumerable<App.Domain.Match>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchToken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinishTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxPlayers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpenedToJoin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CratedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CratedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchType!.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchToken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinishTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxPlayers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenedToJoin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CratedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CratedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

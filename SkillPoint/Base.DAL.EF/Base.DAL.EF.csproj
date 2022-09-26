@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Base.Contracts.DAL\Base.Contracts.DAL.csproj" />
+      <ProjectReference Include="..\Base.Contracts.Base\Base.Contracts.Base.csproj" />
+      <ProjectReference Include="..\Base.DAL\Base.DAL.csproj" />
+      <ProjectReference Include="..\Base.Domain\Base.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    </ItemGroup>
+
+</Project>
