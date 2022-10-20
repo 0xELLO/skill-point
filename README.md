@@ -1,4 +1,5 @@
 # Skill Point
+*transfered from gitlab
 
 Skill Point is a web application with multiple brain, skill and cognitive mini-games 
 
